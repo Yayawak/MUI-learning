@@ -1,14 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-import TryAvatar from './components/TryAvatar';
-
+import * as React from 'react';
+import { TryAvatar } from './components/TryAvatar';
+import TryTypo from './components/TryTypo'
+import TryBadge from './components/TryBadge';
 function App() {
-  return (
-    <>
-      <TryAvatar />
-    </>
-  
-);
+    return (
+        <>
+            {/* <TryTypo /> */}
+            {/* <TryAvatar /> */}
+            {<TryBadge /> }
+        </>
+    );
 }
 
 export default App;
