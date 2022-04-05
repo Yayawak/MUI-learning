@@ -25,7 +25,7 @@ const Div = styled('div')(({ theme }) => (
 ))
 const TryTypo = () => {
     return (
-        <>
+            <>
             <Box sx={{ width: '100%', maxWidth: 500 }}>
                 <ThemeProvider theme={themeA}>
                 {/* margin all directions = m */}

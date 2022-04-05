@@ -1,9 +1,6 @@
 import React from 'react'
-import { Badge, createTheme, ButtonGroup, Divider, Box  } from '@mui/material'
+import { Button, Badge, createTheme, ButtonGroup, Divider, Box} from '@mui/material'
 import { Mail, ShoppingCart, Add, Remove,   } from '@mui/icons-material'
-let theme = createTheme = () => {
-
-}
 
 const TryBadge = () => {
     const [count, setCount] = React.useState(1);
@@ -33,18 +30,26 @@ const TryBadge = () => {
             }}>
                 <div>
                     <Badge color='secondary' badgeContent={count}>
-                        <MailIcon />
+                        <Mail />
                     </Badge>
-                    <ButtonGroup aria-label='reduce'
-                        onClick={()=>{
-                            setCount(Math.max(count - 1, 0))
-                        }}>
 
+                    <ButtonGroup >
+                       <Button aria-label='reduce' onClick={()=>{
+                           setCount(Math.max(count - 1, 0))
+                           }} >
+                            <Remove />
+                        </Button>
+
+                       <Button aria-label='reduce' onClick={()=>{
+                           setCount(Math.max(count + 1, 0))
+                           }} >
+                            <Add />
+                        </Button>
                     </ButtonGroup>
                 </div>
             </Box>
         </>
-    ) 
+    )
 }
 
 export default TryBadge
