@@ -2,6 +2,7 @@ import * as React from 'react';
 import {TryNestedLists} from './components/importDisplayComps'
 import {TryCard} from './components/importSurfaceComps'
 import {TryCard_2} from './components/importSurfaceComps'
+import {TryBox, TryBoxComponent, TryContainer} from './components/importLayerComps'
 
 function App() {
 
@@ -14,7 +15,10 @@ function App() {
             {/* { <TryLists />} */}
             {/* {<TryNestedLists />} */}
             {/* <TryCard /> */}
-            <TryCard_2 />
+            {/* <TryCard_2 /> */}
+            {/* <TryBox /> */}
+            {/* <TryBoxComponent /> */}
+            <TryContainer />
         </>
     );
 }
