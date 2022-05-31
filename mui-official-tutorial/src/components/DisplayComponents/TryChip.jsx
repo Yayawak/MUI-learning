@@ -1,7 +1,7 @@
-import { Done, Delete, TagFace } from '@mui/icons-material'
+import { Done, Delete, TagFaces } from '@mui/icons-material'
 import { Chip, Stack, Typography, Avatar, Divider, Paper, styled, ListItem } from '@mui/material'
 import React from 'react';
-import giyu from '../assets/Giyu.jpg' 
+import giyu from '../../assets/Giyu.jpg' 
 const LisItem = styled('li')(
     ({theme}) => ({
     margin: theme.spacing(0.5)
@@ -65,7 +65,7 @@ const TryChip = () => {
                 {
                     chipData.map(data => {
                         let icon;
-                        if(data.label === 'React') { icon = <TagFace />}
+                        if(data.label === 'React') { icon = <TagFaces />}
                         
                         return (
                             <ListItem key={data.key} >
@@ -73,13 +73,14 @@ const TryChip = () => {
                                     icon={icon}
                                     label={data.label}>
                                     onDelete={
-                                        data.label == 'React' ?
-                                        
-                                    }
+                                        // data.label == 'React' ? '' : ''
+                                    } 
                                 </Chip>
                             </ListItem>
                         )
-                    })
+                    }
+                    )
+                    
                 }
             </Paper>
         </>

@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { TryAvatar } from './components/TryAvatar';
-import TryTypo from './components/TryTypo'
-import TryBadge from './components/TryBadge';
-import TryChip from './components/TryChip'
+import {TryNestedLists} from './components/importDisplayComps'
+import {TryCard} from './components/importSurfaceComps'
+import {TryCard_2} from './components/importSurfaceComps'
 
 function App() {
 
@@ -11,7 +10,11 @@ function App() {
             {/* <TryTypo /> */}
             {/* <TryAvatar /> */}
             {/* {<TryBadge /> } */}
-            {<TryChip />}
+            {/* {<TryChip />} */}
+            {/* { <TryLists />} */}
+            {/* {<TryNestedLists />} */}
+            {/* <TryCard /> */}
+            <TryCard_2 />
         </>
     );
 }
