@@ -2,7 +2,8 @@ import * as React from "react";
 import { TryNestedLists } from "./components/importDisplayComps";
 import { TryCard } from "./components/importSurfaceComps";
 import { TryCard_2 } from "./components/importSurfaceComps";
-import { TryBox, TryBoxComponent, TryContainer, } from "./components/importLayerComps";
+import { TryBox, TryBoxComponent, TryContainer, TryGrid,
+  TryImageList } from "./components/importLayerComps";
 import { TryTabs, TryBasicTabs, TryMyTabs } from "./components/importNavigComps";
 
 function App() {
@@ -18,7 +19,9 @@ function App() {
       {/* <TryCard_2 /> */}
       {/* <TryBox /> */}
       {/* <TryBoxComponent /> */}
-      <TryContainer />
+      {/* <TryContainer /> */}
+      {/* <TryGrid /> */}
+      <TryImageList />
       {/* <TryTabs /> */}
       {/* <TryBasicTabs /> */}
       {/* <TryMyTabs /> */}

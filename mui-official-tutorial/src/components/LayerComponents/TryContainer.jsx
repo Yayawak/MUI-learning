@@ -10,7 +10,7 @@ const TryContainer = () => {
             </Container> */}
             <React.Fragment> 
                 <CssBaseline />
-                <Container maxWidth='sm'>
+                <Container maxWidth='sm' >
                     {/* <Box sx={{ bgcolor: 'primary.dark', height:'100vh'}}/> */}
                     <Box sx={{ backgroundColor: '#cfe8fc', height:'100vh'}}>
                         AAA
