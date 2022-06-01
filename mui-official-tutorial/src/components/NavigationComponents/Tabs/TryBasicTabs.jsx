@@ -1,6 +1,11 @@
-import React from "react";
-import { PropTypes } from "prop-types";
-import { Box, Tabs, Tab, Typography } from "@mui/material";
+import * as React from "react";
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+
+import { Favorite, Phone, PersonPin } from "@mui/icons-material";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -35,9 +40,8 @@ function a11yProps(index) {
   };
 }
 
-export function BasicTabs() {
+export default function TryBasicTabs() {
   const [value, setValue] = React.useState(0);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -50,11 +54,12 @@ export function BasicTabs() {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="PERSON" {...a11yProps(0)} icon={<PersonPin />} />
+          <Tab label="LIKE" {...a11yProps(1)} icon={<Favorite />} />
+          <Tab label="PHONE" {...a11yProps(2)} icon={<Phone />} />
         </Tabs>
       </Box>
+
       <TabPanel value={value} index={0}>
         Item One
       </TabPanel>
@@ -67,28 +72,3 @@ export function BasicTabs() {
     </Box>
   );
 }
-
-const SideBar = () => {};
-
-function App() {
-  const [value, setValue] = React.useState(0);
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
-  return;
-  <>
-    <BasicTabs />
-    {/* <Box sx={{ width: "100%" }}>
-      <Tabs
-        aria-label="basic tabs examples"
-        value={value}
-        onChange={handleChange}
-      >
-        <Tab label="Item one" />
-      </Tabs>
-    </Box> */}
-  </>;
-}
-
-export default App;
